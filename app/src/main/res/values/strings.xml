@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Horizon</string>
+    <string name="my_name">Camilo Andrés García</string>
+    <string name="register">Registrate</string>
+    <string name="text_intro">Inicia una nueva Aventura con Horizon y descubre una nueva forma de ver el mundo</string>
+    <string name="comienza">Comienza</string>
+    <string name="text_bienvenida_login">La aventura esta por iniciar, por favor inicia sesion</string>
+    <string name="ingresar">Ingresar</string>
+</resources>

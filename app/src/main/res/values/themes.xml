@@ -1,0 +1,8 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme (Día) -->
+    <style name="Base.Theme.MyApplication" parent="Theme.Material3.Light.NoActionBar">
+        <!-- Configuración para modo claro -->
+        <item name="android:statusBarColor">#1C2B4D</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+</resources>
