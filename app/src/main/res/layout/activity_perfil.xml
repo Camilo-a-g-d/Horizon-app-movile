@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#56B8F9"
+    android:padding="24dp"
+    tools:context=".PerfilActivity">
+
+    <!-- 📌 Imagen del Perfil -->
+    <ImageView
+        android:id="@+id/img_perfil"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/horizon_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"
+        android:scaleType="centerCrop"
+        style="@style/EditTextRounded"
+        android:padding="5dp"/>
+
+    <!-- 📌 Nombre -->
+
+    <!-- 📌 Apellidos -->
+
+    <TextView
+        android:id="@+id/tv_nombre"
+        style="@style/EditTextRounded"
+        android:layout_width="355dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Nombre: -"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_perfil" />
+
+    <!-- 📌 Correo -->
+
+    <!-- 📌 Teléfono -->
+
+    <!-- 📌 Botón Editar -->
+
+    <TextView
+        android:id="@+id/tv_apellidos"
+        style="@style/EditTextRounded"
+        android:layout_width="355dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Apellidos: -"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_nombre" />
+
+    <TextView
+        android:id="@+id/tv_correo"
+        style="@style/EditTextRounded"
+        android:layout_width="355dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Correo: -"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_apellidos" />
+
+    <TextView
+        android:id="@+id/tv_telefono"
+        style="@style/EditTextRounded"
+        android:layout_width="355dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="52dp"
+        android:gravity="center"
+        android:text="Teléfono: -"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_correo" />
+
+    <Button
+        android:id="@+id/btn_editar"
+        android:layout_width="355dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="52dp"
+        android:backgroundTint="#1C2B4D"
+        android:text="Editar Perfil"
+        android:textColor="@android:color/white"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_telefono" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

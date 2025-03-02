@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#56B8F9"
+    tools:context=".RecuperacionActivity">
+
+    <!-- 📌 Nombre de la App -->
+    <TextView
+        android:id="@+id/tv_nombre_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Horizon"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"/>
+
+    <!-- 📌 Imagen del Logo -->
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/horizon_icon"
+        app:layout_constraintTop_toBottomOf="@id/tv_nombre_app"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <!-- 📌 Contenedor de Pasos -->
+    <ViewFlipper
+        android:id="@+id/viewFlipper"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/img_logo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- 📌 Paso 1: Ingresar Correo -->
+
+        <!-- 📌 Paso 2: Ingresar Código -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="483dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tv_paso1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:text="Paso 1: Ingresa tu correo"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etCorreo"
+                style="@style/EditTextRounded"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:hint="Correo electrónico"
+                android:textColor="@color/black"
+                android:inputType="textEmailAddress"
+                android:padding="12dp" />
+
+            <Button
+                android:id="@+id/btnEnviarCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Enviar Código"
+                android:textColor="@color/white"
+                app:backgroundTint="#1C2B4D" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tv_paso2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paso 2: Ingresa el código de recuperación"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp"/>
+
+            <EditText
+                android:id="@+id/etCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Código de Recuperación"
+                android:inputType="number"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                style="@style/EditTextRounded"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/btnValidarCodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Validar Código"
+                app:backgroundTint="#1C2B4D"
+                android:textColor="@color/white"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+
+        <!-- 📌 Paso 3: Crear Nueva Contraseña -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tv_paso3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paso 3: Crea tu nueva contraseña"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginBottom="20dp"/>
+
+            <EditText
+                android:id="@+id/etNuevaContrasena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nueva Contraseña"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                style="@style/EditTextRounded"
+                android:layout_marginBottom="12dp"/>
+
+            <EditText
+                android:id="@+id/etConfirmarContrasena"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Confirmar Contraseña"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textColor="@color/black"
+                style="@style/EditTextRounded"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/btnConfirmar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Confirmar Recuperación"
+                app:backgroundTint="#1C2B4D"
+                android:textColor="@color/white"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+
+    </ViewFlipper>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
