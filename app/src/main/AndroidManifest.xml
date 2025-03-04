@@ -25,7 +25,7 @@
         <activity android:name=".LoginActivity"/>
         <activity android:name=".RegistroActivity" />
         <activity android:name=".RecuperacionActivity" />
-
+        <activity android:name=".PerfilActivity" />
     </application>
 
 </manifest>

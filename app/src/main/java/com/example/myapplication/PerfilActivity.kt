@@ -1,7 +1,6 @@
 package com.example.myapplication
 
 import android.content.Context
-import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -23,16 +22,22 @@ class PerfilActivity : AppCompatActivity() {
         val sharedPref = getSharedPreferences("UserData", Context.MODE_PRIVATE)
 
         // Recuperar datos del usuario
-        val nombre = sharedPref.getString("nombre", "-")
-        val apellidos = sharedPref.getString("apellidos", "-")
-        val correo = sharedPref.getString("email", "-")
-        val telefono = sharedPref.getString("telefono", "-")
+        tvNombre.text = "Nombre: " + sharedPref.getString("nombre", "-")
+        tvApellidos.text = "Apellidos: " + sharedPref.getString("apellidos", "-")
+        tvCorreo.text = "Correo: " + sharedPref.getString("email", "-")
+        tvTelefono.text = "Teléfono: " + sharedPref.getString("telefono", "-")
 
-
-        tvNombre.text = "Nombre: $nombre"
-        tvApellidos.text = "Apellidos: $apellidos"
-        tvCorreo.text = "Correo: $correo"
-        tvTelefono.text = "Teléfono: $telefono"
-
+        // Verificar si la edición está permitida
+        val modoEdicion = intent.getBooleanExtra("modo_edicion", true)
+        if (!modoEdicion) {
+            btnEditar.isEnabled = false // Deshabilitar el botón de edición
+            btnEditar.alpha = 0.5f // Hacerlo visualmente desactivado
+        } else {
+            btnEditar.setOnClickListener {
+                //val intent = Intent(this, EditarPerfilActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
 }
+

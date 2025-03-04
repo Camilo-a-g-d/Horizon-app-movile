@@ -34,9 +34,11 @@ class LoginActivity : AppCompatActivity() {
             } else if (emailIngresado == emailGuardado && passwordIngresado == passwordGuardada) {
                 Toast.makeText(this, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
 
-                val intent = Intent(this, HomeActivity::class.java)
+                // Redirigir a PerfilActivity SIN permitir edición
+                val intent = Intent(this, PerfilActivity::class.java)
+                intent.putExtra("modo_edicion", false) // Enviar un flag que indica que no se puede editar
                 startActivity(intent)
-                finish()
+                finish() // Cierra LoginActivity para que no pueda volver atrás con el botón de retroceso
             } else {
                 Toast.makeText(this, "Correo o contraseña incorrectos", Toast.LENGTH_SHORT).show()
             }
@@ -53,4 +55,5 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 }
+
 
